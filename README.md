@@ -1,1 +1,1 @@
-# Enterprise Application Development (Java EE)
+# Enterprise Application Development - Java EE
