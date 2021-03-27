@@ -3,9 +3,6 @@ package sale;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
 
-/**
- * Session Bean implementation class SalesBean
- */
 @Stateful
 @LocalBean
 public class SalesBean {

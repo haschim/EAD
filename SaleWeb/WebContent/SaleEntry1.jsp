@@ -21,7 +21,7 @@
 				 value="<%= Double.parseDouble(request.getParameter("price")) %>"/>
 
 	<form>
-	<table align="center" border="1">
+	<table border="1">
 		<tr>
 			<th>Item ID</th>
 			<th>Description</th>

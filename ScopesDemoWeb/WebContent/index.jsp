@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- <jsp:useBean id="myBean" class="pkg.StatelessCounter" scope="request"></jsp:useBean>
+ <jsp:useBean id="myBean" class="book.StatelessCounter" scope="request"></jsp:useBean>
  
  <!-- useBean scope attribute observation 
 	 a. page - count remains 1 (reloads count/ reset state)
@@ -24,7 +24,7 @@
 	<% myBean.incrementCount(); %>
 	<%= myBean.getCount() %>
 	
-		<jsp:forward page="newPage.jsp"></jsp:forward>
+	<jsp:forward page="newPage.jsp"></jsp:forward>
 	
 </body>
 </html>

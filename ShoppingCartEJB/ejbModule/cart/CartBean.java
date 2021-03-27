@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
 
-/**
- * Session Bean implementation class cartBean
- */
 @Stateful
 @LocalBean // bean has no-interface view
 public class CartBean {

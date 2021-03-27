@@ -1,4 +1,4 @@
-<%@page import="pkg.StatelessCounter" %>
+<%@page import="book.StatelessCounter" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>    
 <!DOCTYPE html>
@@ -9,7 +9,5 @@
 </head>
 <body>
 	<%= ((StatelessCounter)request.getAttribute("myBean")).getCount() %>
-	
-	LKJHGFDSASDFGHJK
 </body>
 </html>
