@@ -2,9 +2,6 @@ package account;
 
 import javax.ejb.Stateful;
 
-/**
- * Session Bean implementation class AccountBean
- */
 @Stateful
 public class AccountBean {
 

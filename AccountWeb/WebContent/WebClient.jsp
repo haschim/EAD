@@ -18,10 +18,18 @@
 			account.withdraw(amt);	
 	%>
 
-
 	<p>The transaction is complete</p>
-	<b>Your Current Balance is:</b><span><jsp:getProperty property="balance" name="account"/></span><br>
-	<b>Your last transaction amount</b><span><jsp:getProperty property="amount" name="account"/></span><br>
+	
+	<b>Your Current Balance is:</b>
+	<span>
+		<jsp:getProperty property="balance" name="account"/>
+	</span><br>
+	
+	<b>Your last transaction amount</b>
+	<span>
+		<jsp:getProperty property="amount" name="account"/>
+	</span><br>
+	
 	<a href="form.jsp">Back to Main Menu</a>
 </body>
 </html>

@@ -1,0 +1,435 @@
+@charset "ISO-8859-1";
+
+/* 
+    ===============================
+    Cascading Style Sheet(CSS) file
+    ===============================
+
+    =======================
+    @author: Haschim Kika
+    =======================
+
+    ================
+    Table of Content
+    ================ 
+
+    1. Import font statement
+    2. CSS global resets 
+    3. Root variables and other global settings
+    4. Navbar
+        -> 4.1 Navbar primary
+    5. Login
+    
+    ===============================
+    --------------End--------------    
+    ===============================
+*/
+
+
+/* 
+    1. Import font statement starts here 
+        -> font-name: 'Nunito', sans-serif;
+        -> font-family: 'Be Vietnam', sans-serif;
+        -> font-family: 'Noto Serif', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/*@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');*/
+
+/* Import font statement ends here */
+
+
+/* 2. CSS global resets starts here */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+input:focus, select:focus {
+    outline: 0.125em solid var(--ac-clr-yellow-light);
+}
+/* CSS global resets starts here */
+
+
+/* 3. Root variables and other global settings starts here */
+:root {
+
+    /* 
+        @description color variables breakdown
+
+        ->  2 chars mnemonics 
+                --gb: global 
+                --pr: primary
+                --ne: neutral
+                --ac: accent
+                --tr: transparency
+
+        ->  3 chars mnemonics
+                -clr: color 
+    */
+
+    /* font variables */
+    --gb-font-size: 1em; /* 1em -> 16px unit  or 1px -> 0.0625em */
+    --pr-font-nunito: 'Nunito', sans-serif;
+    --pr-font-vietnam: 'Be Vietnam', sans-serif;
+    --pr-font-noto: 'Noto Serif', serif;
+
+    /* primary colors */
+    --pr-clr-white: #fff;
+    --pr-clr-black: #000;
+
+    /* neutral colors */
+    --ne-clr-darkest: #1f1f1f;
+    --ne-clr-darker: #3f3f3f;
+    --ne-clr-dark: #707070;
+    --ne-clr-dark-grey: #333333;
+
+    /* accent colors primary */
+    --ac-clr-yellow-dark: #e2c552;
+    --ac-clr-yellow-light:#fee16d;
+
+    /* gradient colors */
+    --gd-clr-bc: linear-gradient(180deg, #3f3f3f, #707070);
+
+    /* transparency colors */
+    --tr-clr-black: rgba(0, 0, 0, 0.22);
+
+    /* other global settings */
+    margin: 1.5em 3em;
+    font-size: var(--gb-font-size);
+    font-family: var(--pr-font-nunito);
+}
+/* Root variables and other global settings ends here */
+
+
+/* 4. Navbar starts here */
+    /* 4.1 Navbar primary starts here */
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__primary {
+    display: flex;
+    justify-content: space-between;
+    height: 4em;
+    position: relative;
+    background-color: var(--ne-clr-darker);
+    border-left: .25em solid var(--ac-clr-yellow-light);
+}
+
+.nav__logo {
+    position: relative;
+    display: flex;
+    align-self: center;
+    margin-left: 0.875em;
+    text-decoration: none;
+    font-size: .875em;
+    color: var(--pr-clr-white);
+}
+
+.nav__img {
+    cursor: pointer;
+    height: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: auto 0;
+}
+
+.nav__title {
+	font-size: 2em;
+}
+
+.nav__title::before{
+    content: '_';
+    color: var(--ac-clr-yellow-light);
+    position: absolute;
+    top: .125em;
+    bottom: 0em;
+    left: 2em;
+    right: 0;
+}
+
+.nav__ul {
+    display: flex;
+    margin-right: 1.25em;
+}
+
+.nav__li {
+    display: flex;
+    position: relative;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__link {
+    color: var(--pr-clr-white);
+    text-decoration: none;
+    padding: .5em .75em;
+    outline: none;
+}
+
+.nav__link::after {
+    content: '';
+    background-color: var(--ac-clr-yellow-light);
+    width: 100%;
+    height: .1875em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 200ms ease-in;
+}
+
+.nav__link:hover::after,
+.nav__link:focus::after {
+    transform: scaleX(1);
+}
+    /* 4.1 Navbar primary ends here */
+/* Navbar ends here */
+
+/* login starts here */
+.flex--column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center--horizontal {
+	margin: 0 auto;
+}
+
+.padding--top {
+	padding-top: 1.25em;
+}
+
+.padding--bottom {
+	padding-bottom: 1.25em;
+}
+
+.padding--vertical {
+	padding: 1.25em 0;
+}
+
+.page__heading {
+	font-size: 1.5em;
+	text-align:center;
+	margin-bottom: 1em;
+}
+
+.login, .register {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4.75em;
+}
+
+.form {
+	position: relative;
+    width: 25vw;
+    height: auto;
+    padding: 0 1.5em;
+    padding-bottom: 2.25em;
+    background-color: var(--pr-clr-white);
+    border-radius: 3px;
+    border-top: 2px solid var(--ac-clr-yellow-light);
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.form__error {
+    display: inline-block;
+    position: absolute;
+    top: -3.75em;
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    padding: .625em 3.35em;
+    border-radius: 0.25em;
+    max-width: 24.5em;
+    text-align: center;
+    font-size: 0.875em;
+}
+
+.form__heading {
+    cursor: auto;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: .75em;
+    position: relative;
+}
+
+.form__heading::after {
+    content: '_';
+    color: var(--ac-clr-yellow-light);
+    position: absolute;
+    top: .125em;
+    bottom: 0em;
+    left: 2.975em;
+}
+
+.form__info {
+    margin: 1.25em 0;
+    height: auto; /*12.25em*/
+    justify-content: space-between;
+}
+
+.form__field {
+    height: 6em;
+    justify-content: space-evenly;
+}
+
+.form__label {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.form__input {
+    width: 100%;
+    height: 2.5em;
+    padding: 0 .5em;
+    font-size: .945em;
+}
+
+.form__buttons {
+    justify-content: space-between;
+    height: 6.125em;
+}
+
+.form__button {
+    cursor: pointer;
+    border: 0;
+    border-radius: .27em;
+    padding: .675em 0;
+    font-size: .945em;
+    background-color: var(--ne-clr-darkest);
+    color: var(--pr-clr-white);
+    font-weight: bold;
+}
+
+.form__hyperlink,
+.form__hyperlink:hover, 
+.form__hyperlink:active {
+	cursor: pointer;
+	background: none;
+	border: 0;
+	color: var(--ne-clr-dark-grey);
+	font-size: .75em;
+	text-align: center;
+}
+
+.form__rememberMe {
+	margin-left: 10em;
+	margin-top: -.725em;
+	padding: .5em;
+	display: flex;
+	flex-direction: row;
+	width: 10em;	
+}
+
+.form__rememberMe > label {
+	font-size: .825em;
+	color: var(--ne-clr-dark-grey);
+}
+
+.submit, .yellow--btn {
+    border: .0625em solid var(--ne-clr-darkest);
+    background-color: var(--ac-clr-yellow-light);
+    color: var(--ne-clr-darkest);
+}
+
+.submit:hover,
+.yellow--btn:hover,
+.submit:focus,
+.yellow--btn:focus {
+    background-color: var(--ac-clr-yellow-dark);
+}
+
+.reset {
+    color: var(--pr-clr-black);
+    background-color:var(--pr-clr-white);
+    border: .0625em solid var(--pr-clr-black);
+}
+
+.reset:hover,
+.reset:focus {
+    background-color: var(--tr-clr-black);
+}
+
+/*.validation__error::before {
+    content: '*';
+}*/
+
+.validation__error {
+    display: block;
+    color: red;
+    font-size: 0.875em;
+}
+/* login ends here */
+
+/* JSF dataTable */
+.datatable {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	text-transform: capitalize;
+	outline: var(--ac-clr-yellow-dark);
+	border: 1px solid black;
+}
+
+.datatable__main {
+	display: block;
+	font-weight: bold;
+	font-size: 24px;
+	background-color: var(--ac-clr-yellow-light);
+	color: var(--ne-clr-darkest);
+}
+
+.datatable__otext {
+	font-size: 16px;
+	padding: 0em 2em;	
+}
+
+thead tr {
+	font-weight: bold;
+	font-size: 20px;
+	background-color: var(--ne-clr-darkest);
+	color: var(--ac-clr-yellow-dark);
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--ac-clr-yellow-light);
+	color: black;
+} 
+
+tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
+}
+
+.registered__account {
+	text-align: center;
+	font-weight: bold;
+	font-size: 32px;
+	padding: 1em;
+	border: 1px solid var(--ne-clr-darkest);
+	color: green;
+}
+
+.registered__link {
+	display: block;
+	cursor: pointer;
+	text-decoration: underline;
+	color: var(--ne-clr-dark-grey);
+	padding: .5em 0;
+	margin: 0 auto;
+}
