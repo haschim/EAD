@@ -13,7 +13,7 @@
 		double num2 = Double.parseDouble(request.getParameter("num2"));
 		String choice = request.getParameter("choice");
 		
-		double result=0.0;
+		double result = 0.0;
 		
 		if(choice.equals("Addition")){
 			result = calculator.add(num1,num2);

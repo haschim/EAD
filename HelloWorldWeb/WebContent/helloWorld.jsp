@@ -2,7 +2,6 @@
 
 <%-- using <jsp:useBean></jsp:useBean> tag --%> 
 <jsp:useBean id="helloBean" class="hello.HelloWorld" scope="session"></jsp:useBean>
-<%= helloBean.sayHello("Haschim") %> 
 
 <%-- part a | using bean as ordinary class --%>
 <%--
@@ -18,3 +17,5 @@
 	<%! @EJB private HelloWorld demo = new HelloWorld(); %>
 	<%= demo.sayHello("Smith") %>
 --%>
+
+<%= helloBean.sayHello("Haschim") %>

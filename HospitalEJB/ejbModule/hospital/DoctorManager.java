@@ -5,7 +5,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 @Stateless
-@LocalBean
 public class DoctorManager {
     public DoctorManager() {
     }

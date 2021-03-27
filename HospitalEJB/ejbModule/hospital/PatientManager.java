@@ -7,11 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 @Stateless
-@LocalBean
 public class PatientManager {
     public PatientManager() {
     }
